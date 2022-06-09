@@ -33,7 +33,7 @@ def tableau2():
     # Return template and data
     return render_template("tableauviz2.html")
     
-@app.route("/reference")
+@app.route("/references")
 def references():
     # Return template and data
     return render_template("worksCited.html")

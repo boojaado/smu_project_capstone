@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>About Us</title>
+    <title>Tableau Dashboard</title>
     <!-- Boostrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.min.css">
     <!-- Our CSS -->
@@ -12,51 +12,47 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
-    <script type="text/javascript" src="static/js/tableau_api.js"></script>
+    <script type="text/javascript" src="static/js/tableau_api2.js"></script>
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid navbar-custom">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
   
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="row">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <div class="col-xs-9 phone-nav">
-                <a class="navbar-brand" href="#" id="logo">Menu</a>
-              </div>
-            </div>
-  
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right navbar-right-custom">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dashboards/Model<span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/tableau">First Dashboard Placeholder</a></li>
-                    <li><a href="/tableau2">Second Dashboard</a></li>
-                    <li><a href="/model">Live ML Prediction</a></li>
-                  </ul>
-                </li>
-                <a href="/">Home</a>
-                <a href="/team">Meet the Team</a>
-                <a href="/reference">References</a>
-                <a href="/data">Data Table</a> <!-- href has to be the flask app function-->
-                <br>
-                <a href="/writeup">Machine Learning Explanation</a>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-          </div>
-        </div><!-- /.container-fluid -->
-      </nav>
-      <!-- End of navbar -->
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Home
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/team">Meet the Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/references">References</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/data">Data Table</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tableau">First Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tableau2">Second Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/model">Live ML Prediction</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
     <div class="card container-fluid" style="margin-top:25px; margin-bottom: 25px;">
         <div style="text-align: center;">

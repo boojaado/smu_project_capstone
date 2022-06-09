@@ -14,55 +14,97 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://d3js.org/d3.v6.min.js"></script>
 
-    <script type="text/javascript" src="static/js/script.js"></script>
-    <!--Placeholder for datatable link-->
+    <script type="text/javascript" src="static/js/logic.js"></script>    <!--Placeholder for datatable link-->
 
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid navbar-custom">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
   
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="row">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <div class="col-xs-9 phone-nav">
-                <a class="navbar-brand" href="#" id="logo">Menu</a>
-              </div>
-            </div>
-  
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right navbar-right-custom">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dashboards/Model<span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/tableau">First Dashboard Placeholder</a></li>
-                    <li><a href="/tableau2">Second Dashboard</a></li>
-                    <li><a href="/model">Live ML Prediction</a></li>
-                  </ul>
-                </li>
-                <a href="/">Home</a>
-                <a href="/team">Meet the Team</a>
-                <a href="/reference">References</a>
-                <a href="/data">Data Table</a> <!-- href has to be the flask app function-->
-                <br>
-                <a href="/writeup">Machine Learning Explanation</a>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-          </div>
-        </div><!-- /.container-fluid -->
-      </nav>
-      <!-- End of navbar -->
-
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Home
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/team">Meet the Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/references">References</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/data">Data Table</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tableau">First Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tableau2">Second Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/model">Live ML Prediction</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
       <div class="row" background-color: transparent>
-        <div class="col-md-12 jumbotron text-left">
+        <div class="col-md-12 jumbotron text-center">
             <h1>Predicting Natural Gas Prices</h1>
         </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card border-primary mb-3" style="max-width: 20rem;">
+              <div class="card-header">Filters</div>
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label class="col-form-label" for="Node">Node</label>
+                              <select id="gender">
+                                  <option value="0">East</option>
+                                  <option value="1">Midewest</option>
+                                  <option value="2">Pacific</option>
+                                  <option value="3">Mountain</option>
+                                  <option value="4">South Central</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-form-label" for="Volatility">Volatility</label>
+                              <input type="text" class="form-control" value="5" id="Volatility">
+                          </div>
+                          <div class="form-group">
+                              <label class="col-form-label" for="DNG">Consumption</label>
+                              <input type="text" class="form-control" value="15000" id="DNG">
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label class="col-form-label" for="INV">Inventory</label>
+                              <input type="text" class="form-control" value="20000" id="INV">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-12">
+                          <button type="button" class="btn btn-primary" id="filter">Make Price Prediction</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <hr style="color:lightgray; border-width: 3px;">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12 text-center">
+                  <h1 id="output"></h1>
+              </div>
+          </div>
+      </div>
     </div>
