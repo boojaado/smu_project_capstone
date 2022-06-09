@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 function initializeViz() {
     var placeholderDiv = document.getElementById("tableauViz");
-    var url = "https://public.tableau.com/app/profile/nicklaus.austin/viz/AverageInventoryvsConsumptionofNaturalGasinContinentalUnitedStates/Dashboard1";
+    var url = "https://public.tableau.com/views/AverageInventoryvsConsumptionofNaturalGasinContinentalUnitedStates/Dashboard1";
     var options = {
         width: placeholderDiv.offsetWidth,
         height: placeholderDiv.offsetHeight,
@@ -36,21 +36,6 @@ function initializeViz() {
     viz = new tableau.Viz(placeholderDiv, url, options);
 }
 
-function initializeViz2() {
-    var placeholderDiv = document.getElementById("tableauViz2");
-    var url = "https://";
-    var options = {
-        width: placeholderDiv.offsetWidth,
-        height: placeholderDiv.offsetHeight,
-        hideTabs: true,
-        hideToolbar: true,
-        onFirstInteractive: function() {
-            workbook = viz.getWorkbook();
-            activeSheet = workbook.getActiveSheet();
-        }
-    };
-    viz = new tableau.Viz(placeholderDiv, url, options);
-}
 
 function exportPDF() {
     viz.showExportPDFDialog();
