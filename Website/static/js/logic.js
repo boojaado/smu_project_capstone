@@ -12,7 +12,7 @@ function makePrediction() {
     var Volatility = $("#Volility")
     var Node = $("#Node")
     var Date = $("#Date")
-    var Sit = $("#Sit")
+    var HHst = $("#HHst")
     var INV = $("#INV")
     var DNG = $("#DNG")
     var QNG = $("#QNG") 
@@ -26,7 +26,7 @@ function makePrediction() {
         "Volatility": Volatility,
         "Node": Node,
         "Date": Date,
-        "Sit": Sit,
+        "HHst": HHst,
         "INV": INV,
         "DNG": DNG,
         "QNG": QNG,

@@ -21,8 +21,8 @@ $(document).ready(function() {
 });
 
 function initializeViz() {
-    var placeholderDiv = document.getElementById("tableauViz");
-    var url = "https://public.tableau.com/views/AverageInventoryvsConsumptionofNaturalGasinContinentalUnitedStates/Dashboard1";
+    var placeholderDiv = document.getElementById("tableauViz2");
+    var url = "https://public.tableau.com/views/ExploringtheCostofTransportationofNaturalGasbyRegionintheContinentalUnitedStates/ExploringtheCostofTransportationbyRegionintheContinentalUnitedStates";
     var options = {
         width: placeholderDiv.offsetWidth,
         height: placeholderDiv.offsetHeight,
